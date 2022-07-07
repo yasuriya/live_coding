@@ -57,10 +57,15 @@ function sum(from, to, resolver) {
   for (let index = from; index <= to; index += 1) {
     sumRes += index;
   }
-  resolver(sumRes);
+  return resolver(sumRes);
 }
 
-function res(number) {
-  console.log(number);
+function add(number) {
+  return number + number;
 }
-console.log(sum(1, 8, res));
+
+function mult(number) {
+  return number * number;
+}
+
+console.log(sum(1, 2, mult));
