@@ -61,6 +61,10 @@ const myFilter = (array, callback) => {
   return result;
 };
 
+const func = par => {
+  return par * 2;
+};
+
 const testFilter = el => el > 2;
 const testFilterNum = (el, i) => typeof el === 'string' && i > 2;
 
