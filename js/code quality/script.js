@@ -135,14 +135,24 @@
 
 // good
 // 1.7, 1.9 - false; 1.7, 2.5 - true;
+// input: number, number, number
+// output: array
+// algo:
+// 1. get whole numbers from arguments ('from' and 'to') (Math.ceil)
+// 2. check if any whole numbers are between 'from' and 'to' numbers
+// 3. create new array with (length === 'length')
+// 4. return array filled with random numbers (Math.trunc(Math.random())
+
 const getRandomNumbers = (length, from, to) => {
   const fromCeil = Math.ceil(from);
   const toCeil = Math.ceil(to);
-  if (toCeil < fromCeil) {
+  if (fromCeil >= toCeil) {
     return null;
   }
   return new Array(length).fill(Math.trunc(Math.random() * (toCeil - fromCeil) + fromCeil));
 };
 // test data
-console.log(getRandomNumbers(1, 1.7, 2.5));
-console.log(getRandomNumbers(1, 0.5, 0.9));
+console.log(getRandomNumbers(2, 4.7, 2.5));
+console.log(getRandomNumbers(2, 0.5, 0.9));
+console.log(getRandomNumbers(4, 1.6, 3.24));
+console.log(getRandomNumbers(4, 2.1, 8.7));
