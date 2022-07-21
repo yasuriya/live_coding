@@ -29,12 +29,12 @@ const user = {
   name: 'John',
 };
 
-console.log(addPropertyV1(user, 'surname', 'Doe'));
-console.log(addPropertyV2(user, 'surname', 'Doe'));
-console.log(addPropertyV3(user, 'surname', 'Doe'));
-console.log(user);
-console.log(addPropertyV4(user, 'surname', 'Doe'));
-console.log(user);
+console.log(addPropertyV1(user, 'data', { age: 22 }));
+// console.log(addPropertyV2(user, 'surname', 'Doe'));
+// console.log(addPropertyV3(user, 'surname', 'Doe'));
+// console.log(user);
+// console.log(addPropertyV4(user, 'surname', 'Doe'));
+// console.log(user);
 
 // test data extra
 // const transaction = {
